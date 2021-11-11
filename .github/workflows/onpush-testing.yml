@@ -7,6 +7,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - name: Markdown links check
         uses: ruzickap/action-my-markdown-link-checker@v1
+  run-if-failed:
+    runs-on: ubuntu-latest
+    needs: [markdown-link-check]
+    if: always() && (needs.markdown-link-check.result == 'failure')
+    steps:
+      # chat-pull-request
+        - name: Checkout Repo
+          # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+          uses: actions/checkout@v2
+        - name: Google chatroom message
+          uses: ipacheco-uy/actions-chat@v2.0.2
+          with:
+            # Google Chat Webhook URL
+            url: ${{ secrets.https://chat.googleapis.com/v1/spaces/AAAAxxSJKSM/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=z4f0hx2hD5kQEIFRh4Qzq3KfJXwIbD2YBvdzaHztuxg%3D }}
+            project: AA
+            jiraHost: https://jira.com
