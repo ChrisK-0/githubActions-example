@@ -1,6 +1,7 @@
 <?php include '../src/file.php' ?>
+<?php include '../src/file2.php' ?>
 
-<html lang="eng">
+<html lang="en">
 <head>
     <title>Testing</title>
 </head>
