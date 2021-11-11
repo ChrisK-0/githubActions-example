@@ -22,6 +22,6 @@ jobs:
           uses: ipacheco-uy/actions-chat@v2.0.2
           with:
             # Google Chat Webhook URL
-            url: ${{ secrets.https://chat.googleapis.com/v1/spaces/AAAAxxSJKSM/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=z4f0hx2hD5kQEIFRh4Qzq3KfJXwIbD2YBvdzaHztuxg%3D }}
+            url: https://chat.googleapis.com/v1/spaces/AAAAxxSJKSM/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=z4f0hx2hD5kQEIFRh4Qzq3KfJXwIbD2YBvdzaHztuxg%3D
             project: AA
             jiraHost: https://jira.com
