@@ -5,6 +5,6 @@ Test 2 - onpush markdown link checker
 
 http://google.com/
 
-https://google.com/notreal
+https://google.com/veryreal
 
 http://localhost:8000
