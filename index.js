@@ -9,5 +9,5 @@ app.use("/", function(req, res){
 
 app.listen(4000)
 
-// start server = with "npm start"
-// test with http = http localhost:4000
+// start server with "npm start"
+// test with http "http localhost:4000"
