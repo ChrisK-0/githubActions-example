@@ -1,4 +1,4 @@
-name: file-check
+name: "File checker"
 on: [push, pull_request]
 jobs:
   file_existence:
@@ -16,11 +16,11 @@ jobs:
       - name: File exists
         if: steps.check_files.outputs.files_exists == 'true'
         # Only runs if all of the files exists
-        run: echo All files exists!
-  run-if-failed:
+        run: package.json is in the repository
+  run_if_failed:
     runs-on: ubuntu-latest
-    needs: [ file-check ]
-    if: always() && (needs.file-check.result == 'failure')
+    needs: [ file_existence ]
+    if: always() && (needs.file_existence == 'failure')
     steps:
       # email sender
       - name: Send mail
