@@ -20,8 +20,8 @@ jobs:
         run: package.json is in the repository
   run_if_success:
     runs-on: ubuntu-latest
-    needs: [ markdown-link-check ]
-    if: always() && (needs.markdown-link-check.result == 'failure')
+    needs: [ file_existence ]
+    if: always() && (needs.file_existence.result == 'failure')
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
