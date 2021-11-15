@@ -31,6 +31,6 @@ jobs:
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Build job of ${{github.repository}} failed!
-          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} "failed:" package.json is missing
+          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} failed, package.json is missing
           to: chris.kottisse@khk.ee
           from: Github actions
