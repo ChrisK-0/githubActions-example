@@ -16,7 +16,7 @@ jobs:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: ${{AUTHOR}} pushed to ${{github.repository}}!
-          body: Workflow ${{ github.workflow }} in ${{ github.repository }} was pushed by ${{AUTHOR2}}. Message
+          subject: ${{ github.event.pusher.name }} pushed to ${{github.repository}}!
+          body: Workflow ${{ github.workflow }} in ${{ github.repository }} was pushed by ${{ github.event.pull_request.user.login }}. Message
           to: chris.kottisse@voco.ee
           from: Github actions
