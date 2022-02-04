@@ -1,10 +1,3 @@
-Test 1 - initial commit
+# File checker
 
-
-Test 2 - onpush markdown link checker
-
-http://google.com/
-
-https://google.com/veryreal
-
-http://localhost:8000
+Checks if package.json exists on push. If not, send email.
