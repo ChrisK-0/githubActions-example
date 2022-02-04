@@ -1,10 +1,9 @@
 name: "Mail on push"
 on: [push, pull_request]
 env:
-   AUTHOR: ${{ github.event.pusher.name }}
-   REPOSITORY: ${{ github.repository }}
-   MESSAGE: ${{ github.event.head_commit.message }}
-
+  AUTHOR: ${{github.event.pusher.name}}
+  REPOSITORY: ${{github.repository}}
+  MESSAGE: ${{github.event.head_commit.message}}
 
 jobs:
   mail_on_push:
