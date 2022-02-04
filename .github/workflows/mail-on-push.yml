@@ -2,7 +2,6 @@ name: "File checker"
 on: [push, pull_request]
 env:
    AUTHOR: ${{ github.event.pusher.name }}
-   AUTHOR2: ${{ github.event.pull_request.user.login }}
 
 jobs:
   mail_on_push:
@@ -17,6 +16,6 @@ jobs:
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
           subject: ${{ github.event.pusher.name }} pushed to ${{github.repository}}!
-          body: Workflow ${{ github.workflow }} in ${{ github.repository }} was pushed by ${{ github.event.pull_request.user.login }}. Message
+          body: Workflow ${{ github.workflow }} in ${{ github.repository }} was pushed by ${{ github.event.pusher.name }}. "Message:" ${{ github.event.head_commit.message }}
           to: chris.kottisse@voco.ee
           from: Github actions
